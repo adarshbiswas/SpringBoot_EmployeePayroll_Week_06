@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/users")
 public class Controller {
 
-
     //    Get all users
     @GetMapping
     public String sayHello() {
@@ -22,7 +21,10 @@ public class Controller {
     //    Create a User
     @PostMapping("/new-user")
     public String createUser(@RequestBody User user) {
-        return "Hello " + user.getName() + ", you're email is: " + user.getEmail();
+        String name = user.getName();
+        String email = user.getEmail();
+
+        return "Hello " + name + ", you're email is: " + email;
     }
 
     //    Update a user
