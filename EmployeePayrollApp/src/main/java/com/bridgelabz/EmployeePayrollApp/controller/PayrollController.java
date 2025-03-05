@@ -31,7 +31,7 @@ public class PayrollController {
 
     @DeleteMapping("/delete/{name}")
     public String deleteEmployee(@PathVariable String name) {
-        payrollService.deleteEmployee(name);
+        payrollService.deleteEmployeeData(name);
         return "Employee detail deleted successfully!!";
     }
 }
