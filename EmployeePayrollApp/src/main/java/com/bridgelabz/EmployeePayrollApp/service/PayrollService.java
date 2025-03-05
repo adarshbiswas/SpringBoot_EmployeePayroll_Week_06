@@ -26,7 +26,7 @@ public class PayrollService {
     //    Save employee data
     public String saveEmployee(Employee emp) {
         employeeRepository.save(emp);
-        return "Data saved successfully!";
+        return "Employee detail saved successfully!";
     }
 
     //    Delete a data
